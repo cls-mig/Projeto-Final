@@ -1,0 +1,4 @@
+Usuário - delete from cliente where id=10 - 15/06/2023 - 22:52:50
+Usuário - delete from cliente where id=11 - 26/06/2023 - 18:16:11
+Carlos - update cliente set nome='Carlos Miguel', dtnascimento='2003-05-30', cpf='17367645781', celular='21972310224', logradouro='Rua Trindade', cep='20725150', bairro='Lins de Vasconcelos' where id=1 - 26/06/2023 - 18:19:23
+Carlos Miguel - update cliente set nome='Carlos', dtnascimento='2003-05-30', cpf='17367645781', celular='21972310224', logradouro='Rua Trindade', cep='20725150', bairro='Lins de Vasconcelos' where id=1 - 26/06/2023 - 18:22:03

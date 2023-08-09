@@ -1,0 +1,23 @@
+/* Estilos CSS da página principal do site */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{margin:0; padding:0; box-sizing: border-box;}
+
+/* Estilo do corpo do sistema */
+body {
+    margin: 0;
+    font-family: "Open Sans", roboto;
+    /* overflow: hidden; */
+}
+h1 {
+    padding: 0px 0px 0px 50px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.imagem-centralizada {
+    max-width: 100%;
+    max-height: 100%;
+}

@@ -1,0 +1,25 @@
+/* Estilos CSS da página principal do site */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* *{margin:0; padding:0; box-sizing: border-box;} */
+
+body {
+    margin: 0px;
+    font-family: "Open Sans", roboto;
+}
+h1 {
+    padding: 0px 0px 0px 50px;
+}
+#paginacao {
+    display: flex;
+    justify-content: center;
+}
+#paginacao a {
+    text-decoration: none;
+    color: #707070;
+    padding: 0px 0px 50px 15px;
+    font-size: 18px;
+}
+#paginacao a:hover {
+    transition: 1s;
+    color: #000000;
+}

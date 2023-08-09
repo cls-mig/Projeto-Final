@@ -1,0 +1,12 @@
+#fade, #modal {
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+#fade.hide, #modal.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+#modal.hide {
+    top: 0;
+}

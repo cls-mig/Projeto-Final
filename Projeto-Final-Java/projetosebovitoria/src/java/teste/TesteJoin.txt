@@ -1,0 +1,32 @@
+public static List<Exemplar> getExemplar() { 
+    List<Exemplar> list = new ArrayList<Exemplar>();
+    try {
+        Connection con = getConnection();
+        PreparedStatement ps = con.prepareStatement("SELECT e.id, e.isbn, e.estadoconservacao, e.paginas, e.edicao, e.idioma, e.preco, l.titulo, l.autor, l.editora, l.volume FROM exemplar e INNER JOIN livro l ON e.idlivro = l.id");
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()) {
+            Livro livro = new Livro();
+            livro.setTitulo(rs.getString("titulo"));
+            livro.setAutor(rs.getString("autor"));
+            livro.setEditora(rs.getString("editora"));
+            livro.setVolume(rs.getString("volume"));
+
+            Exemplar exemplar = new Exemplar();
+            exemplar.setId(rs.getInt("id"));
+            exemplar.setIsbn(rs.getString("isbn"));
+            exemplar.setEstadoConservacao(rs.getString("estadoconservacao"));
+            exemplar.setPaginas(rs.getInt("paginas"));
+            exemplar.setEdicao(rs.getInt("edicao"));
+            exemplar.setIdioma(rs.getString("idioma"));
+            exemplar.setPreco(rs.getFloat("preco"));
+            exemplar.setLivro(livro);
+            
+            list.add(exemplar);
+        }
+        
+        // con.close();
+    } catch (Exception erro) {
+        System.out.println(erro);
+    }
+    return list;
+}
